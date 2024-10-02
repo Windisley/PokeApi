@@ -1,0 +1,54 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100dvh;
+    align-content: center;
+}
+
+.contpoke{
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+   padding: 1rem;
+   border: 1px solid;
+   position: relative;
+}
+
+.boxinput{
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+}
+
+.boxinput input{
+   width: 100%;
+   max-width: 300px;
+   margin: 0 auto;
+   padding: 7px 28px;
+   border: 1px solid var(--primary-cor);
+   background-color: var(--secundary-cor);
+   color: var(--primary-cor);
+   text-align: start; 
+}
+
+.boxinput input::placeholder{
+    color: var(--primary-cor);
+    letter-spacing: 1px;
+    text-align: start;
+    text-transform: capitalize;
+
+ }
+
+ .boxinput .searchpoke{
+    color: var(--secundary-cor);
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+ }
+
+ .boxinput .searchpoke:hover{
+   transform: translateX(3px);
+ }

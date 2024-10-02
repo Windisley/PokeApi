@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import axios from "axios"
+import { IoSearchCircleSharp } from "react-icons/io5";
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <div className="contpoke">
         <div className="boxinput">
           <input type="text" placeholder='Filtrar pokemon' autoFocus />
+          <IoSearchCircleSharp className='searchpoke' title='Buscar Pokemon'/>
         </div>
 
         {imgpoke &&
