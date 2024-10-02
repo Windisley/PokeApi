@@ -52,7 +52,7 @@ function App() {
                 </div>
 
                 <p className='elementpoke'>
-                  {elementpoke}
+                  {elementpoke === "fire" ? "Fogo" : elementpoke}
                 </p>
               </div>
             </div>

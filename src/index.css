@@ -1,6 +1,7 @@
 :root{
   --primary-cor:  #f2ca52;
   --secundary-cor: #05000d;
+  --background: #f1f1f1;
 }
 
 *{
@@ -9,9 +10,14 @@
   box-sizing: border-box;
   outline: none;
   border: none;
+  transition: all .3s ease-in-out;
 }
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  
+  background-color: var(--background);
+}
+
+h1, p{
+  user-select: none;
 }

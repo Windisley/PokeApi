@@ -6,12 +6,14 @@
 }
 
 .contpoke{
-    width: 100%;
+    width: 90%;
     min-height: 100%;
     margin: 0 auto;
    padding: 1rem;
    border: 1px solid;
    position: relative;
+   border-radius: 12px;
+ 
 }
 
 .boxinput{
@@ -50,5 +52,95 @@
  }
 
  .boxinput .searchpoke:hover{
-   transform: translateX(3px);
+   transform: scale(1.2);
  }
+
+ .boxpokemon{
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4%;
+ }
+
+ .boxpokemon .pokemondetails{
+    width: 100%;
+    max-width: 220px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+ }
+
+ .boxpokemon .pokemondetails  .boximgpoke{
+    width: 100%;
+    max-width: 100px;
+    min-height: 20px;
+    margin: 0 auto;
+  
+ }
+
+ .boxpokemon .pokemondetails  .boximgpoke img{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center center;
+    user-select: none;
+    
+ }
+
+ .boxpokemon .pokemondetails  .boximgpoke img:hover{
+   transform: scale(1.3);
+    
+ }
+
+ .boxpokemon .pokemondetails .details{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+ }
+
+ 
+ .boxpokemon .pokemondetails .details .namepoke{
+   font-size: .8rem;
+   text-transform: capitalize;
+   letter-spacing: 1px;
+   font-weight: bold;
+   text-align: center;
+   max-width: 100%;
+   margin: 0 auto;
+
+ }
+
+ .boxpokemon .pokemondetails .details .heightpoke,  .boxpokemon .pokemondetails .details .elementpoke{
+    font-size: .8rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: .5rem;
+ 
+  }
+
+
+
+
