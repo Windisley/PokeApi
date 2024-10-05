@@ -12,7 +12,7 @@ function App() {
   const [heightpoke, setHeigtpoke] = useState("")
   const [elementpoke, setElementpoke] = useState("")
   const [idpoke, setIdpoke] = useState(1)
- 
+  const [valueinput, setValueinput] = useState()
 
   
   function increment(){
@@ -39,14 +39,18 @@ function App() {
   }, [idpoke])
 
   //  https://pokeapi.co/api/v2/pokemon/id:1
+  
+  function changevalue(value){
+    setValueinput(value.target.value)
 
-
+  }
+  
   return (
     <div className="container">
       <div className="contpoke">
         <div className="boxinput">
-          <input type="number" placeholder='Informe o id do pokemon' autoFocus />
-          <IoSearchCircleSharp className='searchpoke' title='Buscar Pokemon' />
+          <input type="number" placeholder='Informe o id do pokemon' onChange={changevalue} autoFocus />
+          <IoSearchCircleSharp className='searchpoke' title='Buscar Pokemon'/>
         </div>
 
         <div className="boxpokemon">
