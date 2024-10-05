@@ -29,7 +29,7 @@
    width: 100%;
    max-width: 300px;
    margin: 0 auto;
-   padding: 7px 28px;
+   padding: 5px 28px;
    border: 1px solid var(--primary-cor);
    background-color: var(--secundary-cor);
    color: var(--primary-cor);
@@ -41,7 +41,7 @@
     letter-spacing: 1px;
     text-align: start;
     text-transform: capitalize;
-
+    font-size: .6rem;
  }
 
  .boxinput .searchpoke{
@@ -126,6 +126,7 @@
    text-align: center;
    max-width: 100%;
    margin: 0 auto;
+      font-weight: 500;
 
  }
 
@@ -139,7 +140,7 @@
     display: flex;
     align-items: center;
     margin-top: .5rem;
- 
+    font-weight: 500;
   }
 
   .arrows{
@@ -152,6 +153,23 @@
     display: flex;
     justify-content: space-around;
     
+  }
+
+  .arrows div .arrow{
+   font-size: 1.3rem;
+   color: var(--secundary-cor);
+   cursor: pointer;
+    
+  }
+
+  .arrows div .arrow:hover{
+    transform: scale(1.2);
+  }
+
+  @media screen and (width <=600px) {
+      .boxpokemon{
+         margin-top: 12%;
+      }
   }
 
 

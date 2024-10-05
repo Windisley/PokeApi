@@ -11,9 +11,24 @@ function App() {
   const [namepoke, setNamepoke] = useState()
   const [heightpoke, setHeigtpoke] = useState("")
   const [elementpoke, setElementpoke] = useState("")
+  const [idpoke, setIdpoke] = useState(1)
+ 
+
+  
+  function increment(){
+    setIdpoke(id=> id+=1)
+   }
+
+   function decrement(){
+    setIdpoke(id=> id-=1)
+    if(idpoke < 1){
+      setIdpoke(1)
+    }
+   }
+
 
   useEffect(() => {
-    axios.get("https://pokeapi.co/api/v2/pokemon/onix").then((response) => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${idpoke}`).then((response) => {
       const data = response.data
       setImgpoke(data.sprites.front_default)
       setNamepoke(data.name)
@@ -21,11 +36,7 @@ function App() {
       setElementpoke(data.types[0].type.name)
       console.log(data)
     })
-  }, [])
-
-  useEffect(() => {
-
-  }, [])
+  }, [idpoke])
 
   //  https://pokeapi.co/api/v2/pokemon/id:1
 
@@ -34,7 +45,7 @@ function App() {
     <div className="container">
       <div className="contpoke">
         <div className="boxinput">
-          <input type="text" placeholder='Filtrar pokemon' autoFocus />
+          <input type="number" placeholder='Informe o id do pokemon' autoFocus />
           <IoSearchCircleSharp className='searchpoke' title='Buscar Pokemon' />
         </div>
 
@@ -57,14 +68,14 @@ function App() {
               </div>
 
               <p className='elementpoke'>
-                {elementpoke === "fire" ? "Fogo" || elementpoke === "rock" : "Rocha"}
+                {elementpoke }
               </p>
             </div>
            <div className="arrows">
-              <div>
+              <div  onClick={decrement}>
               <FaArrowAltCircleLeft className='arrow'/>
               </div>
-              <div>
+              <div  onClick={increment}>
               <FaArrowAltCircleRight className='arrow'/>
               </div>
            </div>
