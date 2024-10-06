@@ -12,18 +12,16 @@ function App() {
   const [heightpoke, setHeigtpoke] = useState("")
   const [elementpoke, setElementpoke] = useState("")
   const [idpoke, setIdpoke] = useState(1)
-  const [valueinput, setValueinput] = useState()
+  const [valueinput, setValueinput] = useState(1)
 
   
   function increment(){
-    setIdpoke(id=> id+=1)
+    setIdpoke(id=> Math.min(id+=1, 300))
    }
 
    function decrement(){
-    setIdpoke(id=> id-=1)
-    if(idpoke < 1){
-      setIdpoke(1)
-    }
+    setIdpoke(id=> Math.max(id-=1, 1))
+   
    }
 
 
@@ -41,8 +39,15 @@ function App() {
   //  https://pokeapi.co/api/v2/pokemon/id:1
   
   function changevalue(value){
-    setValueinput(value.target.value)
+    setValueinput(parseInt(value.target.value))
 
+  }
+
+  console.log("input" + valueinput)
+  console.log("id"+ idpoke)
+  function searchpoke(){
+    setIdpoke(valueinput)
+    
   }
   
   return (
@@ -50,7 +55,7 @@ function App() {
       <div className="contpoke">
         <div className="boxinput">
           <input type="number" placeholder='Informe o id do pokemon' onChange={changevalue} autoFocus />
-          <IoSearchCircleSharp className='searchpoke' title='Buscar Pokemon'/>
+          <IoSearchCircleSharp className='searchpoke' title='Buscar Pokemon' onClick={searchpoke}/>
         </div>
 
         <div className="boxpokemon">
